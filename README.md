@@ -5,15 +5,18 @@ Discovering potential driver genes through an integrated model of somatic mutati
 
 Developer: Jianing Xi <xjn@mail.ustc.edu.cn> from Health Informatics Lab, School of Information Science and Technology, University of Science and Technology of China
 
-## Instructions to IntDriver (version 1.0.0)
+## Citation
+[Xi, J., Wang, M. and Li, A., 2017. Discovering potential driver genes through an integrated model of somatic mutation profiles and gene functional information. Molecular BioSystems, 13(10), pp.2135-2144.](https://pubs.rsc.org/en/content/articlehtml/2017/mb/c7mb00303j)
 
-Requirement
+# Instructions to IntDriver (version 1.0.0)
+
+## Requirement
 ------------------------
 * 8GB memory
 * MATLAB R2015a or later
 
 
-Gene functional information
+## Gene functional information
 ------------------------
 1. Interactome information
 The file `./FunctionalInformation/GeneSymbol_net.mat` is the list of investigated genes, which is also the genes included in interaction network [iRefIndex 9](http://irefindex.org).
@@ -21,7 +24,7 @@ The file `./FunctionalInformation/network_adj_matrix.mat` is the adjanceny matri
 2. Gene similarity information from Gene Ontology terms
 The file `./FunctionalInformation/GO_similarity_matrix.mat` is the GO-based similarity matrix of the investigated genes, which is calculated by a previous published software CS2 [https://academic.oup.com/bioinformatics/article/25/9/1178/204335/GS2-an-efficiently-computable-measure-of-GO-based](https://academic.oup.com/bioinformatics/article/25/9/1178/204335/GS2-an-efficiently-computable-measure-of-GO-based).
 
-Input data descriptions
+## Input data descriptions
 ------------------------
 We provide the input data files of TCGA somatic mutation data of three cancers from [cBioPortal](http://www.cbioportal.org/data_sets.jsp) respectively.
 
@@ -35,7 +38,7 @@ We provide the input data files of TCGA somatic mutation data of three cancers f
         |Lung squamous cell carcinoma (LUSC)      | 183        |`./Input/LUSC.mat`                      |
         -------------------------------------------------------------------------------------------------
 
-Output data descriptions
+## Output data descriptions
 ------------------------
 The descriptions of output variables of mCGfinder are provided below:
 
@@ -53,11 +56,11 @@ The descriptions of output variables of mCGfinder are provided below:
         |                      |of the related genes to be potential driver genes.                      |
         -------------------------------------------------------------------------------------------------
 
-run IntDriver
+## Run IntDriver
 ------------------------
 To apply IntDriver on the example input datasets with the default configurations, please run the script file `./demo.m` and the result file will be automatically saved as `.mat` file in directory `./Output` when the program is finished.
 
-Parameter configurations
+## Parameter configurations
 ------------------------
 The configurations of IntDriver can be set as a Struct variable `Conf` in `./demo.m`, with their descriptions provided below:
 
